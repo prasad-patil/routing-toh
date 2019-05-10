@@ -6,14 +6,17 @@ import { CrisisDetailComponent } from './components/crisis-detail/crisis-detail.
 import { CrisesListComponent } from './components/crises-list/crises-list.component';
 import { FormsModule } from '@angular/forms';
 import { CrisisService } from './services/crisis.service';
+import { CrisisCenterComponent } from './crisis-center/crisis-center.component';
+import { CrisisCenterHomeComponent } from './components/crisis-center-home/crisis-center-home.component';
 
 @NgModule({
-  declarations: [CrisisDetailComponent, CrisesListComponent],
-  imports: [
-    CommonModule,
-    FormsModule,
-    CrisisCenterRoutingModule
+  declarations: [
+    CrisisDetailComponent,
+    CrisesListComponent,
+    CrisisCenterComponent,
+    CrisisCenterHomeComponent
   ],
+  imports: [CommonModule, FormsModule, CrisisCenterRoutingModule],
   providers: [CrisisService]
 })
-export class CrisisCenterModule { }
+export class CrisisCenterModule {}
