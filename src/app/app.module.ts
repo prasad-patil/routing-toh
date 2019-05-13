@@ -8,15 +8,18 @@ import { FormsModule } from '@angular/forms';
 import { HeroesModule } from './heroes/heroes.module';
 import { MessageService } from './services/message.service';
 import { CrisisCenterModule } from './crisis-center/crisis-center.module';
+import { ComposeMessageComponent } from './compose-message/compose-message.component';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
-  declarations: [AppComponent, PageNotFoundComponent],
+  declarations: [AppComponent, PageNotFoundComponent, ComposeMessageComponent],
   imports: [
     BrowserModule,
     FormsModule,
     HeroesModule,
     CrisisCenterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuthModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]
